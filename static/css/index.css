@@ -149,9 +149,6 @@ body {
 }
 
 
-/* Video Demo Carousel Styles */
-
-
 /* Video Grid Styles */
 .video-grid {
   display: flex;
@@ -187,22 +184,18 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Responsive adjustments - Standard CSS */
+@media screen and (max-width: 768px) {
   .video-row {
     flex-direction: column;
   }
   
   .video-item {
     max-width: 100%;
+    margin-bottom: 20px;
   }
-}
-
-
-.demo-carousel .item {
-  padding: 0 15px;
-}
-
-.demo-carousel .subtitle {
-  margin-top: 1rem;
+  
+  .video-item:last-child {
+    margin-bottom: 0;
+  }
 }
