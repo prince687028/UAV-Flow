@@ -86,16 +86,6 @@
                     </a>
                   </span>
 
-                  <!-- Supplementary PDF link -->
-                  <span class="link-block">
-                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Supplementary</span>
-                    </a>
-                  </span>
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -108,16 +98,18 @@
                     </a>
                   </span>
 
-                  <!-- ArXiv abstract Link -->
+                   <!-- HuggingFace Dataset link -->
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/2505.15725" target="_blank"
+                    <a href="https://huggingface.co/datasets/wangxiangyu0814/UAV-Flow" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                      <i class="fas fa-database"></i>
                     </span>
-                    <span>arXiv</span>
+                    <span>Dataset</span>
                     </a>
                   </span>
+
+
                 </div>
               </div>
             </div>
@@ -133,13 +125,7 @@
     <div class="hero-body">
       <img src="static/images/DatasetBanner.png" alt="Header Image" style="width: 100%; height: auto;">
       <h2 class="subtitle has-text-justified">
-        We introduce the Flying-on-a-Word (Flow) task, where UAVs learn from expert pilots by mimicking their movements paired
-         with simple instructions. To support this, we present UAV-Flow, the first real-world benchmark for language-guided drone
-          control, including:
-          a task definition,
-          a large dataset from diverse environments,
-          a deployable control framework and
-          a simulation tool for testing.  
+        UAV-Flow consists of a large-scale real-world dataset for language-conditioned UAV imitation learning, featuring multiple UAV platforms, diverse environments, and a wide range of fine-grained flight skill tasks. To enable systematic experimental analysis under the Flow task setting, we additionally provide a simulation-based evaluation protocol and deploy VLA models on real UAVs. To the best of our knowledge, this is the first real-world deployment of VLA models for language-guided UAV control in open environments.
       </h2>
     </div>
   </div>
@@ -156,7 +142,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Unmanned Aerial Vehicles (UAVs) are evolving into language-interactive platforms, enabling more intuitive forms of human-drone interaction. While prior works have primarily focused on high-level planning and long-horizon navigation, we shift attention to language-guided fine-grained trajectory control, where UAVs execute short-range, reactive flight behaviors in response to language instructions. We formalize this problem as the Flying-on-a-Word (Flow) task and introduce UAV imitation learning as an effective approach. In this framework, UAVs learn fine-grained control policies by mimicking expert pilot trajectories paired with atomic language instructions. To support this paradigm, we present UAV-Flow, the first real-world benchmark for language-conditioned, fine-grained UAV control. It includes a task formulation, a large-scale dataset collected in diverse environments, a deployable control framework, and a simulation suite for systematic evaluation. Our design enables UAVs to closely imitate the precise, expert-level flight trajectories of human pilots and supports direct deployment without sim-to-real gap. We conduct extensive experiments on UAV-Flow, benchmarking VLN and VLA paradigms. Results show that VLA models are superior to VLN baselines and highlight the critical role of spatial grounding in the fine-grained Flow setting. 
+              Unmanned Aerial Vehicles (UAVs) are evolving into language-interactive platforms, enabling more intuitive forms of human-drone interaction. While prior works have primarily focused on high-level planning and long-horizon navigation, we shift attention to language-guided fine-grained trajectory control, where UAVs execute short-range, reactive flight behaviors in response to language instructions. We formalize this problem as the Flying-on-a-Word (Flow) task and introduce UAV imitation learning as an effective approach. In this framework, UAVs learn fine-grained control policies by mimicking expert pilot trajectories paired with atomic language instructions. To support this paradigm, we present UAV-Flow, the first real-world benchmark for language-conditioned, fine-grained UAV control. It includes a task formulation, a large-scale dataset collected in diverse environments, a deployable control framework, and a simulation suite for systematic evaluation. Our design enables UAVs to closely imitate the precise, expert-level flight trajectories of human pilots and supports direct deployment without sim-to-real gap. We conduct extensive experiments on UAV-Flow, benchmarking VLN and VLA paradigms. Results show that VLA models are superior to VLN baselines and highlight the critical role of spatial grounding in the fine-grained Flow setting. As far as we are aware, we present the first real-world deployment of a VLA system for language-conditioned UAV control in open environments. Data, code, and real-world flight demos are available on https://prince687028.github.io/UAV-Flow.
             </p>
           </div>
         </div>
@@ -165,175 +151,73 @@
   </section>
   <!-- End paper abstract -->
 
-<!-- Image carousel -->
+
+<!-- Video Demo Grid -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <!-- Platform Scenarios Overview image -->
-          <div class="carousel-image-wrapper">
-            <img src="static/images/ComparationOfBenchmark.png" alt="Platform Scenarios Overview" class="carousel-image"/>
+      <h2 class="title has-text-centered">Real-World Flight Demos</h2>
+      <div class="video-grid">
+        <!-- First Row -->
+        <div class="video-row">
+          <div class="video-item">
+            <div class="video-container">
+              <video controls class="demo-video">
+                <source src="static/videos/demo_01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
-          <h2 class="subtitle has-text-centered">
-
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Prompt Engineering in Description Collection image -->
-          <div class="carousel-image-wrapper">
-            <img src="static/images/TaskExample.png" alt="Prompt Engineering in Description Collection" class="carousel-image"/>
+          <div class="video-item">
+            <div class="video-container">
+              <video controls class="demo-video">
+                <source src="static/videos/demo_02.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
-          <h2 class="subtitle has-text-centered">
-
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Prompt Engineering in Description Collection image -->
-          <div class="carousel-image-wrapper">
-            <img src="static/images/DatasetPipeline.png" alt="Prompt Engineering in Description Collection" class="carousel-image"/>
+          <div class="video-item">
+            <div class="video-container">
+              <video controls class="demo-video">
+                <source src="static/videos/demo_03.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
-          <h2 class="subtitle has-text-centered">
-
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Dataset Construction and Statistical Analysis image -->
-          <div class="carousel-image-wrapper">
-            <img src="static/images/DatasetStatisticAnalysis.png" alt="Dataset Construction and Statistical Analysis" class="carousel-image"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Overview of the Assistant Mechanism and UAV Navigation LLM Framework image -->
-          <div class="carousel-image-wrapper">
-            <img src="static/images/DeployMechanism.png" alt="Overview of the Assistant Mechanism and UAV Navigation LLM Framework" class="carousel-image"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-
-          </h2>
         </div>
         
-        <div class="item">
-          <!-- Prompt Engineering in Description Collection image -->
-          <div class="carousel-image-wrapper">
-            <img src="static/images/ExpSR.png" alt="Prompt Engineering in Description Collection" class="carousel-image"/>
+        <!-- Second Row -->
+        <div class="video-row">
+          <div class="video-item">
+            <div class="video-container">
+              <video controls class="demo-video">
+                <source src="static/videos/demo_04.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
-          <h2 class="subtitle has-text-centered">
-
-          </h2>
+          <div class="video-item">
+            <div class="video-container">
+              <video controls class="demo-video">
+                <source src="static/videos/demo_06.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="video-item">
+            <div class="video-container">
+              <video controls class="demo-video">
+                <source src="static/videos/demo_08.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End image carousel -->
-
-<!-- Video Demo Carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title has-text-centered">Demo Videos</h2>
-      <div id="demo-carousel" class="carousel demo-carousel">
-        <div class="item">
-          <!-- Video 1 -->
-        <center> 
-          <div class="video-container">
-            <video controls class="demo-video">
-              <source src="static/videos/demo_01.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </center>
-          <h2 class="subtitle has-text-centered">
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Video 2 -->
-          <center> 
-          <div class="video-container">
-            <video controls class="demo-video">
-              <source src="static/videos/demo_02.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          </center>
-          <h2 class="subtitle has-text-centered">
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Video 2 -->
-          <center> 
-          <div class="video-container">
-            <video controls class="demo-video">
-              <source src="static/videos/demo_03.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          </center>
-          <h2 class="subtitle has-text-centered">
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Video 2 -->
-          <center> 
-          <div class="video-container">
-            <video controls class="demo-video">
-              <source src="static/videos/demo_04.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          </center>
-          <h2 class="subtitle has-text-centered">
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Video 2 -->
-          <center> 
-          <div class="video-container">
-            <video controls class="demo-video">
-              <source src="static/videos/demo_06.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          </center>
-          <h2 class="subtitle has-text-centered">
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Video 2 -->
-          <center> 
-          <div class="video-container">
-            <video controls class="demo-video">
-              <source src="static/videos/demo_08.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          </center>
-          <h2 class="subtitle has-text-centered">
-            Demo 2: Obstacle Avoidance
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Video 2 -->
-          <center> 
-          <div class="video-container">
-            <video controls class="demo-video">
-              <source src="static/videos/demo_09.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          </center>
-          <h2 class="subtitle has-text-centered">
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Video Demo Carousel -->
+<!-- End Video Demo Grid -->
 
   <!-- Paper poster -->
   <section class="hero is-small is-light">
