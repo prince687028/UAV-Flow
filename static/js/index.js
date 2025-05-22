@@ -19,3 +19,13 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
+
+
+// Initialize demo video carousel
+bulmaCarousel.attach('#demo-carousel', {
+	slidesToScroll: 1,
+	slidesToShow: 1,
+	pagination: false,
+	infinite: true,
+	autoplay: false
+  });
